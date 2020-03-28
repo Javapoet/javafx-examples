@@ -13,7 +13,7 @@ import javafx.stage.StageStyle;
  * application. You set the window modality of a JavaFX Stage via its
  * initModality() method.
  */
-public class BasicJavafxModalApplication extends Application {
+public class BasicJavafxApplicationWithModalWindow extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
