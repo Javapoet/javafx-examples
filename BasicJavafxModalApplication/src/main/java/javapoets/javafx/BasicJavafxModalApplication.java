@@ -20,24 +20,23 @@ public class BasicJavafxModalApplication extends Application {
 
         primaryStage.setTitle("Javapoets™ Basic JavaFX Application with a Modal Window");
 
-        Stage stage = new Stage();
+        Stage stage = new Stage();  // create the modal window
 
-        // Set the Stage modality.
+        /* Set the window modality */
         stage.initModality(Modality.APPLICATION_MODAL);  // will block all other windows (stages) opened by this JavaFX application
         //stage.initModality(Modality.WINDOW_MODAL);  // will block the window (Stage) that "owns" this newly created Stage, and only that
         //stage.initModality(Modality.NONE);  // will not block any other windows opened in this application
 
-        // Set the Stage style.
+        /* Set the window decoration style */
         stage.initStyle(StageStyle.DECORATED);  // a standard window with OS decorations (title bar and minimize / maximize / close buttons), and a white background
         //stage.initStyle(StageStyle.UNDECORATED);  // a standard window without OS decorations, and a white background
         //stage.initStyle(StageStyle.TRANSPARENT);  // an undecorated window with transparent background
         //stage.initStyle(StageStyle.UNIFIED);  // same as a decorated stage, except with no border between the decoration area and the main content area
         //stage.initStyle(StageStyle.UTILITY);  // a decorated window, but with minimal decorations
 
-        stage.initOwner(primaryStage); // A JavaFX Stage can be owned by another Stage.
+        stage.initOwner(primaryStage);  // a JavaFX Stage can be owned by another Stage
 
         primaryStage.show();
-
         stage.showAndWait();
     }
 
