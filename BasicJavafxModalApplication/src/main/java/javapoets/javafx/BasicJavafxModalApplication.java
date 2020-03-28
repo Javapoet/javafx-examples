@@ -8,9 +8,10 @@ import javafx.stage.Modality;
 import javafx.stage.StageStyle;
 
 /*
- * Stage Modality:
- * You can set the modality of a JavaFX Stage (window). The modality determines if the window will block other windows opened by the same application.
- * You set the window modality of a JavaFX Stage via its initModality() method.
+ * Stage Modality: You can set the modality of a JavaFX Stage (window). The
+ * modality determines if the window will block other windows opened by the same
+ * application. You set the window modality of a JavaFX Stage via its
+ * initModality() method.
  */
 public class BasicJavafxModalApplication extends Application {
 
@@ -26,10 +27,11 @@ public class BasicJavafxModalApplication extends Application {
         //stage.initModality(Modality.WINDOW_MODAL);  // will block the window (Stage) that "owns" this newly created Stage, and only that
         //stage.initModality(Modality.NONE);  // will not block any other windows opened in this application
 
+        // Set the Stage style.
         stage.initStyle(StageStyle.DECORATED);  // a standard window with OS decorations (title bar and minimize / maximize / close buttons), and a white background
         //stage.initStyle(StageStyle.UNDECORATED);  // a standard window without OS decorations, and a white background
         //stage.initStyle(StageStyle.TRANSPARENT);  // an undecorated window with transparent background
-        //stage.initStyle(StageStyle.UNIFIED);  // like a decorated stage, except it has no border between the decoration area and the main content area
+        //stage.initStyle(StageStyle.UNIFIED);  // same as a decorated stage, except with no border between the decoration area and the main content area
         //stage.initStyle(StageStyle.UTILITY);  // a decorated window, but with minimal decorations
 
         stage.initOwner(primaryStage); // A JavaFX Stage can be owned by another Stage.
@@ -38,7 +40,7 @@ public class BasicJavafxModalApplication extends Application {
 
         stage.showAndWait();
     }
-    
+
     public static void main(String[] args) {
         launch(args);
     }
