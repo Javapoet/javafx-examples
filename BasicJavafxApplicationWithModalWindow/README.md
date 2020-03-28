@@ -2,7 +2,7 @@
 
 ## Main Class
 
-[BasicJavafxApplicationWithLog4j.java](src/main/java/javapoets/javafx/BasicJavafxApplicationWithLog4j.java)
+[BasicJavafxApplicationWithModalWindow.java](src/main/java/javapoets/javafx/BasicJavafxApplicationWithModalWindow.java)
 
 ## Build Instructions
 
