@@ -1,16 +1,17 @@
-apply plugin: 'java'
-apply plugin: 'application'
-targetCompatibility = "1.8"
-sourceCompatibility = "1.8"
-mainClassName = "javapoets.javafx.BasicJavafxApplicationWithLog4j"
-
 buildscript {
-
     repositories {
         mavenCentral()
     }
-
 }
+
+plugins {
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "javapoets.javafx.BasicJavafxApplicationWithLog4j"
 
 repositories {
     mavenCentral()
@@ -19,8 +20,15 @@ repositories {
 List compileList = [
       "org.apache.logging.log4j:log4j-api:${project.property('log4j.version')}"
     , "org.apache.logging.log4j:log4j-core:${project.property('log4j.version')}"
+    , "org.openjfx:javafx:11"
 ]
 
 dependencies {
     compile compileList
 }
+
+javafx {
+    version = '11'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
