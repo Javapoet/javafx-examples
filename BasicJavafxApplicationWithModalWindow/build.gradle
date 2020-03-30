@@ -1,3 +1,16 @@
+plugins {
+    id 'org.openjfx.javafxplugin' version '0.0.7'
+}
+
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "javapoets.javafx.BasicJavafxApplicationWithModalWindow"
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = '11'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
